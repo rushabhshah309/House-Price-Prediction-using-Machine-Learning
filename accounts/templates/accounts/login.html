@@ -1,0 +1,199 @@
+{% load static %}
+<html>
+<head>
+
+    <title>log-in</title>
+</head>
+<style>
+*
+{
+margin: 0;
+}
+body
+{
+background: url("{% static 'accounts/images/home1.jpeg' %}");
+background-size: cover;
+background-position: center;
+}
+.header
+{
+	margin-bottom: -15px;
+	background-color: rgba(0,0,0,0.8);
+}
+.header ul
+{
+
+text-align: left;
+margin-top: -55px;
+margin-left: 180px;
+
+}
+.header ul li
+{
+list-style: none;
+display:inline-block;
+
+}
+.header ul li a
+{
+display: block;
+text-decoration: none;
+
+color: white;
+font-size: 18px;
+font-family: sans-serif;
+letter-spacing: 4px;
+font-weight: normal;
+padding: 17px;
+padding-top: -10px;
+padding-bottom: 10px;
+}
+
+
+.header ul li a:hover
+{
+border-bottom: 4px solid darkorange;
+
+}
+.login-box
+{
+width: 280px;
+height: 320px;
+background: rgba(0,0,0,0.5);
+color: #fff;
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%,-50%);
+box-sixe: border-box;
+padding: 70px 30px;
+font-family: sans-serif;
+}
+
+h1
+{
+margin: 0;
+padding: 0 0 20px;
+text-align: center;
+font-size: 22px;
+}
+.login-box p
+{
+margin: 0;
+padding: 0;
+font-weight: bold;
+}
+.login-box input
+{
+width: 100%;
+margin-bottom: 20px;
+}
+.login-box input[type="text"], input[type="password"]
+{
+border: none;
+border-bottom: 1px solid #fff;
+background: transparent;
+outline: none;
+height: 40px;
+color: #fff;
+font-size: 16px;
+}
+.login-box input[type="submit"]
+{
+border: none;
+outline: none;
+height: 40px;
+background: #1c8adb;
+color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}
+.login-box a
+{
+text-decoration: none;
+font-sixe: 14px;
+color: #fff;
+}
+.login-box input[type="submit"]:hover
+{
+cursor: pointer;
+background:rgb(144,238,144);
+color: 000;
+}
+.login-box a:hover
+{
+color: rgb(144,238,144);
+}
+.hpp
+{
+	margin-top: 15px;
+
+	margin-right: 950px;
+	position: top-left;
+	border-bottom: 2px;
+	padding: 5px;
+
+	color: black;
+	font-weight: 525;
+
+	text-align: left;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 35px;
+
+
+}
+.hpp a
+{
+	display: block;
+text-decoration:none;
+
+color: rgb(0,0,0);
+font-size: 35px;
+
+}
+
+
+
+
+
+
+</style>
+
+<script type="text/javascript" src="{% static 'accounts/javascript/practice1.js' %}"></script>
+
+<body>
+<div class="hpp">
+    <a href="/"><img src="{% static 'main/images/logo.png' %}" height="45px" width="200px" style="margin-top: -21px; margin-left: -10px;"></a>
+</div>
+<div class="header">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/accounts/login">Login</a></li>
+        <li><a href="/accounts/signup">Signup</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+    <div class="login-box">
+        <h1> Login Here </h1>
+        <form onsubmit="return validate()" class="box" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+
+            <p> Username </p>
+            <input id="yo" type="text" name="username" placeholder="Enter Username">
+            <p> Password </p>
+            <input id="yo1" type="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="submit" value="Login">
+            <a href="a"> Forgot Password? </a><br><br><br>
+
+              <div>
+
+                {% for message in messages %}
+                <h1>{{ message }}</h1>
+                {% endfor %}
+            </div>
+
+
+        </form>
+</body>
+</html>

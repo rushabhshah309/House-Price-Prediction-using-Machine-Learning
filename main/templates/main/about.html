@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+
+</head>
+<style>
+*
+{
+margin: 0;
+}
+.header
+{
+	margin-bottom: -15px;
+	background-color: rgba(0,0,0,0);
+}
+.header ul
+{
+
+text-align: left;
+margin-top: -60px;
+margin-left: 180px;
+
+}
+.header ul li
+{
+list-style: none;
+display:inline-block;
+color:white;
+}
+.header ul li a
+{
+
+display: block;
+text-decoration: none;
+
+color: white;
+font-size: 18px;
+font-family: sans-serif;
+letter-spacing: 4px;
+font-weight: normal;
+padding: 17px;
+padding-top: 25px;
+padding-bottom: 10px;
+}
+
+
+.header ul li a:hover
+{
+border-bottom: 4px solid darkorange;
+
+}
+body{
+background-image: url("{% static 'main/images/home1.jpeg' %}");
+background-size: 1550px 650px;
+background-repeat: no-repeat;
+background-position: 0px 0px;
+
+}
+#abc{
+	font-family: 'calibri', sans-serif;
+	font-size: 100px;
+	margin-top: 200px;
+	margin-left: -100px;
+	font-weight: 800;
+	text-align: center;
+	color: white;
+
+	font-family:'High Tower Text', sans-serif;
+
+}
+#yo{
+	color: black;
+	font-size: 30px;
+
+	text-align:center;
+
+	height:400px;
+	width: 500px;
+	top: 760px;
+	left: 865px;
+	right: 200px;
+	position: absolute;
+
+	font-family:'High Tower Text', sans-serif;
+}
+#yo1{
+	color: rgb(50,50,50);
+	font-size: 15px;
+
+	text-align: absolute;
+	height:400px;
+	width: 500px;
+	top: 840px;
+	left: 900px;
+	right: 200px;
+	position: absolute;
+
+	font-family: 'cambria', sans-serif;
+}
+
+#kai{
+	height: 450px;
+	width: 800px;
+	margin-left: 15px;
+	margin-top: 370px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px 2px black;
+}
+
+
+.hpp
+{
+	margin-top: px;
+
+
+	position: top-left;
+	border-bottom: 2px;
+
+	color: black;
+
+
+	text-align: left;
+	text-decoration: none;
+	font-family: sans-serif;
+
+    background-color: rgba(0,0,0,0.8);
+
+}
+.hpp a
+{
+	display: block;
+text-decoration:none;
+
+color: rgb(0,0,0);
+font-size: 35px;
+
+}
+
+
+
+
+</style>
+<body>
+<div class="hpp">
+    <a href="/"><img src="{% static 'main/images/logo.png' %}" height="45px" width="200px" style="margin-top: -5px; margin-left: -10px;"></a>
+</div>
+<div class="header">
+    <ul>
+        {% if request.session.first_name %}
+        <li>Hello, {{ request.session.first_name }}</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/accounts/logout">Logout</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/data">My History</a></li>
+
+        {% else %}
+        <li><a href="/">Home</a></li>
+        <li><a href="/accounts/login">Login</a></li>
+        <li><a href="/accounts/signup">Signup</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about">About</a></li>
+        {% endif %}
+    </ul>
+    <h1 id="abc" align="center">About Us</h1>
+    <div id="yo">
+        <h1>OUR MISSION</h1>
+    </div>
+    <div id="yo1">
+        <h2>Normally house price is decided on the basis of negotiation between the buyer and the seller avoiding the
+            real aspects that decides the true value of a house.We at house price prediction take into consideration
+            various important aspects which are collectively called a feature set before predicting the house price.This
+            system takes into account the difficulties that a buyer or a seller experiences while deciding the price and
+            mollifies thier route through giving them true values of their property.</h2>
+    </div>
+    <img src="{% static 'main/images/about.png' %}" id="kai">
+</body>
+</html>

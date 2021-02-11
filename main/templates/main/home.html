@@ -1,0 +1,542 @@
+{% load static %}
+<html>
+<head>
+    <title>home</title>
+</head>
+<style>
+*
+{
+margin: 0;
+}
+body
+{
+
+width: 100%;
+height: 300px;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+.header
+{
+	margin-bottom: -15px;
+	background-color: rgba(0,0,0,0.8);
+}
+.header ul
+{
+
+text-align: left;
+margin-top: -55px;
+margin-left: 180px;
+
+}
+.header ul li
+{
+list-style: none;
+display:inline-block;
+color: white;
+
+}
+.header ul li a
+{
+display: block;
+text-decoration: none;
+
+color: white;
+font-size: 18px;
+font-family: sans-serif;
+letter-spacing: 4px;
+font-weight: normal;
+padding: 17px;
+padding-top: -10px;
+padding-bottom: 10px;
+}
+
+
+.header ul li a:hover
+{
+border-bottom: 4px solid darkorange;
+
+}
+
+.image
+{
+width: 250px;
+height: 250px;
+border-radius: 10px;
+position: absolute;
+margin-top: 1000px;
+margin-left: 162.5px;
+background-color: #fff;
+}
+.image1
+{
+width: 250px;
+height: 250px;
+border-radius: 10px;
+position: absolute;
+margin-top: 1000px;
+margin-left: 575px;
+}
+.image2
+{
+width: 250px;
+height: 250px;
+position: absolute;
+border-radius: 10px;
+margin-top: 1000px;
+margin-left: 987.5px;
+}
+.box
+{
+width: 250px;
+height: 70px;
+margin-top: 1250px;
+margin-left: 162.5px;
+position: absolute;
+background: rgba(0,0,0,0);
+}
+.box p
+{
+text-decoration: bold;
+text-align: absolute;
+font-family: sans-serif;
+color: black;
+font-size: 20px;
+}
+.box1
+{
+width: 250px;
+height: 70px;
+margin-top: 1250px;
+margin-left: 575px;
+position: absolute;
+background: rgba(0,0,0,0);
+}
+.box1 p1
+{
+
+text-decoration: bold;
+text-align: absolute;
+font-family: sans-serif;
+color: black;
+font-size: 20px;
+}
+.box2
+{
+width: 250px;
+height: 70px;
+margin-top: 1250px;
+margin-left: 987.5px;
+position: absolute;
+background: rgba(0,0,0,0);
+}
+.box2 p2
+{
+text-decoration: bold;
+text-align: absolute;
+font-family: sans-serif;
+color: black;
+font-size: 20px;
+}
+.ab
+{
+width: 250px;
+height: 260px;
+margin-top: 1500px;
+margin-left: 162.5px;
+position: absolute;
+background: rgba(0,0,0,0);
+box-shadow: 0px 0px 10px 2px grey;
+}
+.ab p3
+{
+text-decoration: bold;
+position: absolute;
+text-align: center;
+font-family:'calibri', sans-serif;
+color: black;
+font-size: 30px;
+padding: 10px;
+margin-top: 100px;
+}
+.abc
+{
+width: 250px;
+height: 260px;
+margin-top: 1500px;
+margin-left: 575px;
+position: absolute;
+background: rgba(0,0,0,0);
+box-shadow: 0px 0px 10px 2px grey;
+}
+.abc p4
+{
+text-decoration: bold;
+position: absolute;
+text-align: center;
+font-family:'calibri', sans-serif;
+color: black;
+font-size: 30px;
+padding: 10px;
+margin-top: 100px;
+}
+.abcd
+{
+width: 250px;
+height: 260px;
+margin-top: 1500px;
+margin-left: 987.5px;
+position: absolute;
+background: rgba(0,0,0,0);
+box-shadow: 0px 0px 10px 2px grey;
+}
+.abcd p5
+{
+text-decoration: bold;
+position: absolute;
+text-align: center;
+font-family:'calibri', sans-serif;
+color: black;
+font-size: 30px;
+padding: 10px;
+margin-top: 100px;
+}
+.buyer
+{
+width: 75px;
+height: 75px;
+margin-left: 90px;
+position: absolute;
+margin-top: 15px;
+padding: 2px;
+
+}
+
+.prop
+{
+width: 75px;
+height: 75px;
+margin-left: 90px;
+position: absolute;
+margin-top: 15px;
+padding: 2px;
+
+}
+
+.purch
+{
+width: 75px;
+height: 75px;
+margin-left: 90px;
+position: absolute;
+margin-top: 15px;
+padding: 2px;
+
+}
+
+.abcde
+{
+width: 100%;
+height: 80px;
+margin-top: 1375px;
+margin-left: px;
+font-size: 40px;
+font-family: sans-serif;
+position: absolute;
+text-decoration: bold;
+color: solid black;
+background: rgba(0,0,0,0);
+}
+.abcde p6
+{
+margin-top: 10px;
+margin-left: 50px;
+font-size: 60px;
+font-family: 'calibri',sans-serif;
+position: absolute;
+text-decoration: bold;
+color: solid black;
+}
+.hpp
+{
+	margin-top: 15px;
+
+	margin-right: 950px;
+	position: top-left;
+	border-bottom: 2px;
+	padding: 5px;
+
+	color: black;
+	font-weight: 525;
+
+	text-align: left;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 35px;
+
+
+}
+.hpp a
+{
+	display: block;
+text-decoration:none;
+
+color: rgb(0,0,0);
+font-size: 35px;
+
+}
+
+
+
+.xyz
+{
+width: 100%;
+height: 600px;
+margin-top: 1900px;
+
+position: absolute;
+}
+.box3
+{
+width: 200px;
+height: 200px;
+margin-top: 2100px;
+margin-left: 235px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+border-radius: 50%;
+}
+.box3 p7
+{
+text-decoration: none;
+position: absolute;
+text-align: center;
+font-family: sans-serif;
+color: white;
+font-size: 30px;
+font-weight: 300;
+margin-left: 50px;
+margin-top: 75px;
+}
+.box3 p7 a
+{
+
+color: white;
+font-size: 30px;
+text-decoration: none;
+position: center;
+text-align: center;
+font-weight: 300;
+}
+.box3 p7 a:hover
+{
+color: rgb(144,238,144);
+}
+
+{% if user.is_authenticated %}
+.box4
+{
+width: 200px;
+height: 200px;
+margin-top: 2100px;
+margin-left: 275px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+border-radius: 50%;
+}
+{% else %}
+.box4
+{
+width: 200px;
+height: 200px;
+margin-top: 2100px;
+margin-left: 580px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+border-radius: 50%;
+}
+{% endif %}
+.box4 p8
+{
+text-decoration: none;
+position: absolute;
+text-align: center;
+font-family: sans-serif;
+color: white;
+font-size: 30px;
+font-weight: 300;
+margin-left: 50px;
+margin-top: 75px;
+}
+.box4 p8 a
+{
+
+color: white;
+font-size: 30px;
+text-decoration: none;
+position: center;
+text-align: center;
+font-weight: 300;
+}
+.box4 p8 a:hover
+{
+color: rgb(144,238,144);
+}
+.box5
+{
+width: 200px;
+height: 200px;
+margin-top: 2100px;
+margin-left: 925px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+border-radius: 50%;
+}
+.box5 p9
+{
+text-decoration: none;
+position: absolute;
+text-align: center;
+font-family: sans-serif;
+color: white;
+font-size: 30px;
+font-weight: 300;
+margin-left: 50px;
+margin-top: 75px;
+}
+.box5 p9 a
+{
+
+color: white;
+font-size: 30px;
+text-decoration: none;
+position: center;
+text-align: center;
+font-weight: 300;
+}
+.box5 p9 a:hover
+{
+color: rgb(144,238,144);
+}
+
+
+.ok
+{
+
+width: 1492px;
+height:700px;
+position: absolute;
+
+}
+.mySlides
+{
+position: absolute;
+width: 102%;
+height: 100%;
+margin-top: 15px;
+}
+
+</style>
+<body>
+
+<div class="hpp">
+    <a href="/"><img src="{% static 'main/images/logo.png' %}" height="45px" width="200px" style="margin-top: -21px; margin-left: -10px;"></a>
+</div>
+<div class="header">
+    <ul>
+
+        {% if request.session.first_name %}
+        <li>Hello, {{ request.session.last_name }}</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="accounts/logout">Logout</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/data">My History</a></li>
+
+        {% else %}
+        <li><a href="/">Home</a></li>
+        <li><a href="accounts/login/">Login</a></li>
+        <li><a href="accounts/signup/">Signup</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about">About</a></li>
+        {% endif %}
+    </ul></div>
+    <img src="{% static 'main/images/homef.jpeg' %}" class="image">
+    <img src="{% static 'main/images/home5.jpeg' %}" class="image1">
+    <img src="{% static 'main/images/home7.jpeg' %}" class="image2">
+    <div class="box">
+        <p> Actual price: 221900$</p>
+        <p>Predicted price: 206367$</p>
+    </div>
+    <div class="box1">
+        <p1> Actual price: 538000$</p1>
+        <br>
+        <p1>Predicted price: 478820$</p1>
+    </div>
+    <div class="box2">
+        <p2> Actual price: 221900$</p2>
+        <br>
+        <p2>Predicted price: 206367$</p2>
+    </div>
+    <div class="ab">
+        <img src="{% static 'main/images/buyer.png' %}" class="buyer">
+        <p3>Eliminates the negotiation between the Buyers and Sellers</p3>
+    </div>
+    <div class="abc">
+        <img src="{% static 'main/images/prop.png' %}" class="prop">
+        <p4> We help you to Get the true value of your property</p4>
+    </div>
+    <div class="abcd">
+        <img src="{% static 'main/images/purch.png' %}" class="purch">
+        <p5>Purchase and selling of propery gets easier</p5>
+    </div>
+
+    <img src="{% static 'main/images/xyz.jpeg' %}" class="xyz">
+    {% if user.is_authenticated %}
+
+    <div class="box4">
+        <p8><a href="/predict">Predict</a></p8>
+    </div>
+    <div class="box5">
+        <p9><a href="/about">About</a></p9>
+    </div>
+    {% else %}
+
+    <div class="box3">
+        <p7><a href="/accounts/signup">Signup</a></p7>
+    </div>
+    <div class="box4">
+        <p8><a href="/predict">Predict</a></p8>
+    </div>
+    <div class="box5">
+        <p9><a href="/about">About</a></p9>
+    </div>
+    {% endif %}
+
+    <div class="ok">
+  <img class="mySlides" src="{% static 'main/images/5.jpg' %}">
+  <img class="mySlides" src="{% static 'main/images/6.jpg' %}">
+  <img class="mySlides" src="{% static 'main/images/4.jpg' %}">
+   <img class="mySlides" src="{% static 'main/images/home1.jpeg' %}">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>

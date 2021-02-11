@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Enter your OTP here</h1>
+<form name="otp" method="POST" action="{%url 'validateotp' %}">
+    {%csrf_token%}
+    <input type="hidden" name="r_otp" value="{{randotp}}">
+    <input type="hidden" name="email" value="{{email}}">
+    <input type="text" name="u_otp">
+    <input type="submit" name="validateotp">
+</form>
+</body>
+</html>

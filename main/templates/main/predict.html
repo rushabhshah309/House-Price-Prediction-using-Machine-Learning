@@ -1,0 +1,349 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+    <link rel="stylesheet" type="text/css" href="learning.css">
+</head>
+
+<script type="text/javascript" src="{% static 'main/javascript/pred.js' %}"></script>
+<style type="text/css">
+	*
+{
+margin: 0;
+}
+body
+{
+background: url("{% static 'main/images/home1.jpeg' %}");
+background-size: cover;
+background-position: center;
+border-bottom: 5px lightblue;
+margin-top: 650px;
+}
+.header
+{
+	margin-bottom: -15px;
+	background-color: rgba(0,0,0,0.8);
+}
+.header ul
+{
+
+text-align: left;
+margin-top: -55px;
+margin-left: 180px;
+
+}
+.header ul li
+{
+list-style: none;
+display:inline-block;
+color: white;
+
+}
+.header ul li a
+{
+display: block;
+text-decoration: none;
+
+color: white;
+font-size: 18px;
+font-family: sans-serif;
+letter-spacing: 4px;
+font-weight: normal;
+padding: 17px;
+padding-top: -10px;
+padding-bottom: 10px;
+}
+.login-box{
+	background-color: rgba(0,0,0,0.5);
+	overflow-y: scroll;
+	text-align: left;
+	margin-left: 410px;
+	margin-right: 450px;
+	margin-top: 80px;
+	height: 530px;
+	font-family: sans-serif;
+	color: white;
+	font-size:23px;
+}
+.header ul li a{
+color: #ffffff;
+}
+.header ul li a:hover
+{
+border-bottom: 4px solid orange;
+}
+#yo1{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo2{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo3{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo4{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo5{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo6{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo7{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo8{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo9{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo10{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+#yo11{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	color:#ffffff;
+}
+.block{
+	background: rgba(0,0,0,0.5);
+	border-color: solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+.hpp
+{
+	margin-top: 15px;
+
+	margin-right: 950px;
+	position: top-left;
+	border-bottom: 2px;
+	padding-top: -10px;
+	margin-top:10px;
+
+	color: black;
+	font-weight: 525;
+
+	text-align: left;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 35px;
+    background-color: rgba(0,0,0,0);
+
+}
+.hpp a
+{
+	display: block;
+text-decoration:none;
+
+color: rgb(0,0,0);
+font-size: 35px;
+
+}
+#kuch{
+	background-color:#ffffff;
+	font-family: sans-serif;
+	border: solid thin 2px;
+	border-color: #000000;
+	border-radius: 20px;
+	padding:5px 10px;
+	cursor: pointer;
+}
+.some{
+	position: fixed;
+	top: 0px;
+	height: 70px;
+	right: 0px;
+	left: 0px;
+	background: transparent;
+	background-color: rgba(0,0,0,0);
+}
+.some a
+{
+	color: #ffffff;
+}
+
+
+
+
+</style>
+<body>
+<div class="some">
+
+    <div class="hpp">
+
+        <a href="/"><img src="{% static 'main/images/logo.png' %}" height="45px" width="200px"
+                         style="margin-top: -21px; margin-left: -10px;"></a>
+    </div>
+
+
+    <div class="header">
+        <ul>
+            {% if request.session.first_name %}
+            <li>Hello, {{ request.session.first_name }}</li>
+
+            <li style="text-align: center;font-size: 20px;"><a href="/">Home</a></li>
+            <li style="text-align: center;font-size: 20px;"><a href="/accounts/logout">Logout</a></li>
+
+            <li style="text-align: center;font-size: 20px;"><a href="/predict">Predict</a></li>
+            <li style="text-align: center;font-size: 20px;"><a href="/about">About </a></li>
+            <li style="text-align: center;font-size: 20px;"><a href="/data">My History</a></li>
+            {% else %}
+
+            <li style="text-align: center;font-size: 20px;"><a href="/">Home</a></li>
+            <li style="text-align: center;font-size: 20px;"><a href="/accounts/login">Login</a></li>
+            <li style="text-align: center;font-size: 20px;"><a href="/accounts/signup">Signup</a></li>
+            <li style="text-align: center;font-size: 20px;"><a href="/predict">Predict</a></li>
+            <li style="text-align: center;font-size: 20px;"><a href="/about">About </a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+
+    <div class="login-box">
+        <form onsubmit="return validate()" action="{% url 'predict' %}" method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <legend align="center">Please fill all the details</legend>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Bedroom &nbsp
+                    <input id="yo1" type="number" name="number1" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Bathroom &nbsp
+                    <input id="yo2" type="number" name="number2" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Sqft_living &nbsp
+                    <input id="yo3" type="number" name="number3" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp Sqft_lot &nbsp
+                    <input id="yo4" type="number" name="number4" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp Floors &nbsp
+                    <input id="yo5" type="number" name="number5" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Sqft_above &nbsp
+                    <input id="yo6" type="number" name="number6" placeholder="&nbsp&nbsp Enter here"></p>
+
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Sqft_basement
+                    <input id="yo8" type="number" name="number8" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Zip code &nbsp
+                    <input id="yo9" type="number" name="number9" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Sqft_living15 &nbsp
+                    <input id="yo10" type="number" name="number10" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Sqft_lot15 &nbsp
+                    <input id="yo11" type="number" name="number11" placeholder="&nbsp&nbsp Enter here"></p>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Waterfront:&nbsp&nbsp&nbsp&nbsp&nbsp
+                <select name="waterfront">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                &nbsp<br>
+                <br>
+                <p>&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp Year renovated &nbsp
+                    <input id="yo14" type="number" name="yesno" class="block" placeholder="&nbsp&nbsp Enter here"
+                           style="color: white; width: 120px;"> &nbsp &nbsp ("if yes")
+                </p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp Year Built &nbsp
+                    <input id="yo15" type="number" name="date" class="block" placeholder="&nbsp&nbsp Enter here"
+                           style="color: white;"></p>
+                <br>
+                <p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp View &nbsp
+                    <select class="block" style="color: white;" name="viewss">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </p>
+                <br>
+                <p>&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp Condition &nbsp
+                    <select class="block" style="color: white;" name="condition">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </p>
+                <br>
+
+                <p>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp Grade &nbsp
+                    <select class="block" style="color: white;" name="grade">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select></p>
+                <br>
+                <p style="text-align: center;">
+                    <input id="kuch" type="submit" name="btn" value="Submit">
+                </p>
+            </fieldset>
+        </form>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

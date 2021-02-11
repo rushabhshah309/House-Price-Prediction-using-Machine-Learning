@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .block
+    {
+    margin-top:-30px;
+    margin-left:-10px;
+    font-size:25px;
+    background-color: lightblue;
+    }
+    #yo{
+    font-size:50px;
+    text-align:center;
+    background-color:lightblue;
+    }
+</style>
+<body>
+
+<div class="block">
+    <p>
+<h1 id="yo">My Search History</h1>
+</p>
+	{%for item in items%}
+        The entered number of bedrooms are : {{item.bedroom}}<br>
+        The entered number of bathrooms are : {{item.bathroom}}<br>
+        The entered sqft_living is : {{item.sqft_living}}<br>
+        The entered sqft_lot is : {{item.sqft_lot}}<br>
+        The entered number of floors are : {{item.floors}}<br>
+        The entered sqft_above is : {{item.sqft_above}}<br>
+        The entered sqft_basement is : {{item.sqft_basement}}<br>
+        The entered zipcode is : {{item.zipcode}}<br>
+        The entered sqft_living15 is : {{item.sqft_living15}}<br>
+        The entered sqft_lot15 is : {{item.sqft_lot15}}<br>
+        The entered value for waterfront is : {{item.waterfront}}<br>
+        The entered value of year_renovated is : {{item.year_renovated}}<br>
+        The entered value of year_built is : {{item.year_built}}<br>
+        The entered number of views are : {{item.viewss}}<br>
+        The entered value of condition out of 5 is : {{item.condition}}<br>
+        The entered value of grade out of 10 is : {{item.grade}}<br>
+
+        <h3>The predicted price is {{item.price}}</h3><br>
+	{%endfor%}
+</div>
+
+</body>
+</html>

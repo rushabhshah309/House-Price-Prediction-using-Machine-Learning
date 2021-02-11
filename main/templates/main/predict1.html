@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>predict</title>
+</head>
+<style type="text/css">
+
+body{
+	background-image: url("{% static 'main/images/home1.jpeg' %}");
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.block{
+	margin-top: 100px;
+	font-size: 50px;
+	font-family: 'calibri';
+	text-align: center;
+}
+
+.b{
+	width: 220px;
+	height: 40px;
+	border: none;
+	font-size: 100px;
+	font-family: 'calibri';
+	background-color: rgba(0,0,0,0);
+}
+</style>
+<body>
+<div class="block">
+	{% if val %}
+		<h2>YOUR PREDICTED PRICE IS ${{val.price}}</h2>
+	{% endif %}
+</div>
+</body>
+</html>
