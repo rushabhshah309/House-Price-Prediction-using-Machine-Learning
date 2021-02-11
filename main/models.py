@@ -60,13 +60,3 @@ class HouseDetails(models.Model):
     grade = models.CharField(max_length=50, choices=GRADE_CHOICES)
     price = models.FloatField()
 
-
-
-
-
-
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
-
-
-## user property relation
-## user id propert id
